@@ -36,6 +36,9 @@ if __name__ == '__main__':
         #get temperature and humidity measurement
         [temp,humidity] = grovepi.dht(Temp_Humid,0)
 
+        temp = int(temp)
+        humidity = int(humidity)
+
         #get light sensor value
         light = grovepi.analogRead(LightSens)
 
