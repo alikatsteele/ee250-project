@@ -53,6 +53,12 @@ if __name__ == '__main__':
         #HTTPS post to server for processing
         x = requests.post(url, json = myobj, verify=False)
 
+        #HTTPS request for vibe score
+        vibe = requests.get(url)
+
+        #Print out Vibe Score
+        setText("Vibe Score: " + str(vibe))
+
 
 
 
