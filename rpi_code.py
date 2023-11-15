@@ -21,6 +21,7 @@ if __name__ == '__main__':
     LightSens = 0 #A0, light sensor
     SoundSens = 1 #A1, sound sensor
 
+    #server url for later use
     url = 'https://172.233.154.180:3000'
 
     grovepi.pinMode(Temp_Humid, "INPUT") #setting sensor to an input
@@ -36,6 +37,7 @@ if __name__ == '__main__':
         #get temperature and humidity measurement
         [temp,humidity] = grovepi.dht(Temp_Humid,0)
 
+        #convert temperature and humidity into integer values
         temp = int(temp)
         humidity = int(humidity)
 
@@ -45,8 +47,10 @@ if __name__ == '__main__':
         #get sound sensor value
         sound = grovepi.analogRead(SoundSens)
 
+        #format data into a dictionary
         myobj = {'temperature': temp, 'humidity': humidity, 'light':light, 'sound':sound}
 
+        #HTTPS post to server for processing
         x = requests.post(url, json = myobj, verify=False)
 
 
