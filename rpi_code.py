@@ -17,7 +17,7 @@ grovepi.set_bus("RPI_1")
 is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
 be true"""
 if __name__ == '__main__':
-    Temp_Humid = 0   # D0, temperature and humidity sensor
+    Temp_Humid = 4   # D4, temperature and humidity sensor
     LightSens = 0 #A0, light sensor
     SoundSens = 1 #A1, sound sensor
 
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         #get sound sensor value
         sound = grovepi.analogRead(SoundSens)
 
-        setText("t=" + str(temp) +"h=" + str(humidity) + "\n" + "l=" + str(light) + "s=" + str(sound))
+        setText("t=" + str(temp) , "h=" + str(humidity) + "\n" , "l=" + str(light) , "s=" + str(sound))
 
 
 
