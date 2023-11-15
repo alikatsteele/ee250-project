@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
         myobj = {'temperature': temp, 'humidity': humidity, 'light':light, 'sound':sound}
 
-        x = requests.post(url, json = myobj)
+        x = requests.post(url, json = myobj, verify=False)
 
 
 
