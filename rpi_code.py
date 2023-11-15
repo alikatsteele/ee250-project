@@ -57,7 +57,7 @@ if __name__ == '__main__':
 
         #HTTPS request for vibe score
         vibe_total = requests.get(url_vibe)
-        vibe = json.loads(vibe.content)
+        vibe = json.loads(vibe_total.content)
 
         #Print out Vibe Score
         setText("Vibe Score: " + str(vibe['vibe']))
