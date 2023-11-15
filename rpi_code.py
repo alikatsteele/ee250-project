@@ -22,7 +22,7 @@ if __name__ == '__main__':
     SoundSens = 1 #A1, sound sensor
 
     #server url for later use
-    url = 'https://vibe-detector.jamm-es/update'
+    url = 'https://vibe-detector.jamm.es/update'
 
     grovepi.pinMode(Temp_Humid, "INPUT") #setting sensor to an input
     grovepi.pinMode(LightSens, "INPUT") #setting sensor to an input
