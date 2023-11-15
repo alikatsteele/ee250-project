@@ -55,10 +55,12 @@ if __name__ == '__main__':
         x = requests.post(url_post, json = myobj, verify=False)
 
         #HTTPS request for vibe score
-        vibe = requests.get(url_vibe)
+        vibe_total = requests.get(url_vibe)
+        vibe = json.loads(vibe.content)
 
         #Print out Vibe Score
-        setText("Vibe Score: " + str(vibe))
+        setText("Vibe Score: " + str(vibe['vibe']))
+        setRGB(vibe['r'], vibe['g'], vibe['b'])
 
 
 
