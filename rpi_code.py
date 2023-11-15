@@ -42,7 +42,7 @@ if __name__ == '__main__':
         #get sound sensor value
         sound = grovepi.analogRead(SoundSens)
 
-        setText("t=" + str(temp) +"h=" + str(humidity) + "/n" + "l=" + str(light) + "s=" + str(sound))
+        setText("t=" + str(temp) +"h=" + str(humidity) + "\n" + "l=" + str(light) + "s=" + str(sound))
 
 
 
