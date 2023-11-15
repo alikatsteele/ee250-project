@@ -33,8 +33,8 @@ if __name__ == '__main__':
 
     while True:
         #So we do not poll the sensors too quickly
-        #sleep for a reasonable time of 500ms between each iteration.
-        time.sleep(0.5)
+        #sleep for a reasonable time of 200ms between each iteration.
+        time.sleep(0.2)
 
         #get temperature and humidity measurement
         [temp,humidity] = grovepi.dht(Temp_Humid,0)
